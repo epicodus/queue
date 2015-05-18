@@ -21,9 +21,23 @@ See an example at [ember-queue.firebaseapp.com](https://ember-queue.firebaseapp.
 * `ember server`
 * Visit http://localhost:4200
 
-## Building
+## Deploying
 
-* `ember build`
+This app is hosted on Firebase hosting. To configure for deployment, run from your project folder:
+
+```bash
+$ npm install -g firebase-tools
+$ firebase login
+$ ember generate firebase-hosting
+```
+
+Then, in `firebase.json`, change the value of the `"firebase"` key to your Firebaes app name.
+
+To deploy, run:
+
+```bash
+$ ember firebase deploy
+```
 
 ## User stories:
 - As a student I want to ask for help so a teacher will come over. __DONE__
