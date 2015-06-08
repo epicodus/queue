@@ -23,12 +23,6 @@ var TicketComponent = Ember.Component.extend({
     var ticket = this.get('ticket');
     var controller = this.get('queueController');
     controller.transitionToRoute('queue.ticket-details', ticket);
-  },
-
-  actions: {
-    closeTicket: function() {
-      this.get('ticket').setProperties({'closedAt': new Date(), 'open': false}).save();
-    }
   }
 });
 
