@@ -7,6 +7,7 @@ var Ticket = DS.Model.extend({
   createdAt: DS.attr('number'),
   closedAt: DS.attr('number'),
   question: DS.attr('string'),
+  location: DS.attr('string'),
 
   waitTime: function() {
     var createdAt = moment(this.get('createdAt'));
