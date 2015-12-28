@@ -1,0 +1,9 @@
+{
+  "firebase": "epicodus-help",
+  "public": "./dist",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
