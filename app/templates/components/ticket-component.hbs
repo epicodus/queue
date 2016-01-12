@@ -1,8 +1,5 @@
 <li class="list-group-item">
-  <div>
-    <h4 class="pull-right text-muted">></h4>
-    <span class="student-name">{{ticket.student}}</span><br>
-    <span>Location: {{ticket.location}}</span><br>
-    {{time-ago time=ticket.createdAt}}
-  </div>
+  <div class="ticket-location">{{ticket.location}}</div>
+  {{time-ago time=ticket.createdAt}}
+  <div class="student-name">{{ticket.student}}</div>
 </li>
