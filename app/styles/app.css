@@ -4,7 +4,7 @@
 
 body {
   background-color: #ecf0f1;
-  font-family: 'Nixie One', cursive;
+  font-family: sans-serif;
   padding-top: 50px;
 }
 
@@ -46,12 +46,6 @@ h2 {
   width: 100%;
 }
 
-.queue li {
-  padding: 30px 20px;
-  border-left: 0px;
-  border-right: 0px;
-}
-
 .tv li {
   background-color: #333;
 }
@@ -71,20 +65,44 @@ h2 {
   height: 100%;
 }
 
-.list-group-item {
-  border-radius: 0 !important;
-}
-
-.time-ago {
-  font-size: 80%;
-}
-
 #new-ticket-form, #question, #queued {
   margin-top: 40px;
 }
 
+.queue li {
+  border-left: 0px;
+  border-right: 0px;
+}
+
+.list-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-group-item {
+  border-radius: 0 !important;
+  font-size: 8vh;
+  display: flex;
+  align-items: center;
+  min-height: 15vh;
+}
+
+.time-ago {
+  font-size: 6vh;
+  min-width: 4em;
+  max-width: 15vw;
+}
+
+.ticket-location {
+  min-width: 3em;
+  max-width: 10vw;
+  padding-left: 10px;
+}
+
 .student-name {
-  font-size: 150%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .well {
