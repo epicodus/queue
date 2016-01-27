@@ -8,20 +8,35 @@ var TimeAgo = Ember.Component.extend({
     this.startGlobalTime();
   },
 
+  willDestroyElement: function() {
+    this._super.apply(this, arguments);
+    return Ember.run.cancel(this.get('nextTime'));
+  },
+
   startGlobalTime: function() {
     this.set('now', new Date());
-    Ember.run.later(this, this.startGlobalTime, 2000);
+    var nextTime = Ember.run.later(this, this.startGlobalTime, 2000);
+    this.set('nextTime', nextTime);
   },
 
   timeAgo: function() {
     moment.relativeTimeThreshold('m', 999);
     moment.relativeTimeThreshold('s', 1);
     moment.locale('en', {
-      relativeTime : {
-          past:   "%s",
-          s:  "1",
-          m:  "1",
-          mm: "%dm"
+      relativeTime: {
+          future: 'in %s',
+          past: '%s',
+          s: '1m',
+          m: '1m',
+          mm: '%dm',
+          h: '1h',
+          hh: '%dh',
+          d: '1d',
+          dd: '%dd',
+          M: '1 month',
+          MM: '%d months',
+          y: '1 year',
+          yy: '%d years'
       }
     });
     return moment(this.get('time')).fromNow();
