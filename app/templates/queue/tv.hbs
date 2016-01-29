@@ -1,5 +1,5 @@
 <ul class="list-group queue tv">
-  {{#each ticket in model}}
+  {{#each model as |ticket|}}
     <li class="list-group-item">
       <div>
         <h4 class="pull-right">{{time-ago time=ticket.createdAt}}</h4>

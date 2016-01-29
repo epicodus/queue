@@ -5,13 +5,13 @@
     <form class="form">
       <label for="student-name" class="sr-only">Your name</label>
       <div class="form-group">
-        {{input class="form-control" id="student-name" valueBinding='student' placeholder="Please enter your name"}}
+        {{input class="form-control" id="student-name" value=model.student placeholder="Please enter your name"}}
       </div>
       <div class="form-group">
-        {{input class="form-control" valueBinding='location' placeholder="Please enter your location"}}
+        {{input class="form-control" value=model.location placeholder="Please enter your location"}}
       </div>
       <div class="form-group">
-        {{textarea class="form-control" rows="5" valueBinding='question' placeholder="Give a brief description of issue you are having."}}
+        {{textarea class="form-control" rows="5" value=model.question placeholder="Give a brief description of issue you are having."}}
       </div>
       <button class="btn btn-danger pull-right" type="submit"  {{action 'createTicket'}}>Help!</button>
     </form>

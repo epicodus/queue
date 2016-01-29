@@ -1,5 +1,5 @@
 <ul class="list-group queue">
-  {{#each ticket in model}}
+  {{#each model as |ticket|}}
     {{ticket-component ticket=ticket queueController=controller}}
   {{/each}}
 </ul>

@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-var HelpController = Ember.ObjectController.extend({
+var HelpController = Ember.Controller.extend({
   actions: {
     createTicket: function() {
       var controller = this;
