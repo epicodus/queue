@@ -16,7 +16,7 @@ var StatisticsController = Ember.ArrayController.extend({
 
     var averageTime = waitTimes.reduce(function(sum, next) {
       return sum + next;
-    }) / waitTimes.length;
+    }, 0) / waitTimes.length;
 
     return Math.round(averageTime);
   }.property('model.@each.open'),
