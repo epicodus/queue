@@ -5,7 +5,10 @@ module.exports = function(environment) {
     modulePrefix: 'queue',
     environment: environment,
     contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com" },
-    firebase: 'https://' + require('../firebase.json')['firebase'] + '.firebaseio.com/',
+    firebase: 'https://epicodus-help.firebaseio.com/',
+    contentSecurityPolicy: {
+      'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com"
+    },
     baseURL: '/',
     locationType: 'hash',
     EmberENV: {
