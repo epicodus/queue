@@ -2,7 +2,9 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
     var app = new EmberApp(defaults, {
-        // Any other options
+      SRI: {
+        enabled: false
+      }
     });
 
     app.import('bower_components/moment/moment.js');
