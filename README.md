@@ -6,6 +6,10 @@ giving instructors a list of which students need help in the order they asked.
 
 ## Installation
 
+This app's dependencies are out of date.
+It will only work on Node v10.
+Downgrade if you are using a higher version of Node.
+
 ```shell
 npm install
 bower install
